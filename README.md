@@ -5,18 +5,7 @@ TABLE OF CONTENTS
 1. ABSTRACT
 2. CIRCUIT DESCRIPTION
 3. TOOLS USED
-4. CIRCUIT DESIGN
- 
-    a. XNOR module
-    
-    b. Inverter module
-    
-    c. Carry logic module
-    
-    d. Sum logic module
-    
-    e. 1 bit full adder 
-    
+4. CIRCUIT DESIGN    
 5. CIRCUIT ANALYSIS
 
     a. Transient Analysis
@@ -36,8 +25,12 @@ Adders are an integral part of computational circuits like ALU in processors.  T
 
 ## 2.  Circuit Description  ##
 
-Full adder takes 3 inputs (A,B Cin) and generates Sum and Carry (Cout) as described in truth table (Fig 1). The Boolean expression for sum and Carry is as below :
-Sum=A⊗B⊗C		 (1)
+Full adder takes 3 inputs (A,B Cin) and generates Sum and Carry (Cout) as described in truth table below.
+
+![truth_table](https://user-images.githubusercontent.com/96903338/156157132-840e18f7-707e-410d-a7ca-42e3d33188dd.png)
+
+The Boolean expression for sum and Carry is as below :
+Sum=A⊗B⊗C		                (1)
 Cout=AB+BC+AC                (2)
 The circuit consists of 3 stages – A 3 transistor XNOR logic and sum and carry generation logic.
 
@@ -60,9 +53,44 @@ Synopsys Custom Compiler tool was used to develop the schematic of the circuit. 
 
 ##  4. Circuit Design  ##
 
+The schematic of the circuit is shown below 
+
+![library_user_1_bit_adder_2_schematic](https://user-images.githubusercontent.com/96903338/156152982-029e3c5b-c777-4a03-b695-7af162c113e8.png)
+
+Transistor M5 used to implement inverter has W= 0.1um and L=0.075um and all the other transistors have W=0.1um and L=0.030um
+
+
 ##  5. Circuit Analysis  ##
+**a. Transient Analysis**
+Transient analysis is used to observe circuit behaviour over a period of time. The 3 inputs of adder circuit A,B,C were given pulses with different period and observed the values of Sum and carry as shown below :
+
+![full_adder_transient_analysis](https://user-images.githubusercontent.com/96903338/156154794-4b7aaaf1-3656-4f0c-a525-76ceaf60892b.png)
+
+**b. Power Calculation ** 
+
+Observed the current through all the sources present in the circuit A,B,C and power supply. Calculated the average value of the current using the 'measure' utility of the waveviewer.
+
+              Average current =
+              Vdd =1.05V
+              Total Power = V*I =
+              
+**c.Propagation Delay Calculation **
+
+The propagation delay of a circuit is the time taken for the output to change when the input has changed. It is calculated at a threshold of 50% of signal level at both input and output. Propagation delay is calculated for the highest delay critical path in the circuit. The critical path for the proposed full adder is shown below :
+
+![image](https://user-images.githubusercontent.com/96903338/156156319-2b564c93-0a3d-4d4e-b67d-c4c475837d1a.png)
+
+The input states for the worst case delay is as below :
+
+![image](https://user-images.githubusercontent.com/96903338/156156437-e6c3b53f-49ad-4fda-bfcb-a6d42e156aee.png)
+
+Observed propagation delay for Sum : 0.840ps
+Observed propagation delay for Carry : 0.242ps 
+
 
 ##  6. Netlist ##
+
+Netlist for the circuit is shared here.
 
 ##  7. Author ##
 
