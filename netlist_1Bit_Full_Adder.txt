@@ -1,0 +1,64 @@
+*  Generated for: PrimeSim
+*  Design library name: library_user
+*  Design cell name: 1_bit_adder_2
+*  Design view name: schematic
+.lib 'saed32nm.lib' TT
+
+*Custom Compiler Version S-2021.09
+*Tue Mar  1 03:48:27 2022
+
+.global gnd! vdd! vddd!
+********************************************************************************
+* Library          : library_user
+* Cell             : 1_bit_adder_2
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+xm30 net51 xnor b gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm27 c inv net51 gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm9 sum xnor c gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm8 sum c xnor gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm3 inv xnor gnd! gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm1 xnor b a gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm0 xnor a b gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm29 net51 inv b vdd! p105 w=0.1u l=0.03u nf=1 m=1
+xm28 net51 xnor c vdd! p105 w=0.1u l=0.03u nf=1 m=1
+xm7 sum inv c vdd! p105 w=0.1u l=0.03u nf=1 m=1
+xm6 sum c inv vdd! p105 w=0.1u l=0.03u nf=1 m=1
+xm5 inv xnor vddd! vdd! p105 w=0.1u l=0.075u nf=1 m=1
+xm4 xnor gnd! vddd! vdd! p105 w=0.1u l=0.03u nf=1 m=1
+v12 c gnd! dc=0 pulse ( 1.05 0 0 0.1u 0.1u 3.5u 7u )
+v11 b gnd! dc=0 pulse ( 1.05 0 0 '0.1us' '0.1us' 7.5u 15u )
+v10 a gnd! dc=0 pulse ( 1.05 0 0 '0.1us' '0.1us' 10u 20u )
+v22 vddd! gnd! dc=1.05
+
+
+
+
+
+
+
+
+.tran '0.1u' '30u' name=tran
+
+.option primesim_remove_probe_prefix = 0
+.probe v(*) i(*) level=1
+.probe tran i(v10) i(v11) i(v12) i(v22)
+
+.temp 25
+
+
+
+.option primesim_output=wdf
+
+
+.option parhier = LOCAL
+
+
+
+
+
+
+.end
+
