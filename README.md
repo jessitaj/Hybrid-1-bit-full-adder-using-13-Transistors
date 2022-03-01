@@ -29,7 +29,7 @@ Full adder takes 3 inputs (A,B Cin) and generates Sum and Carry (Cout) as descri
 
 ![truth_table](https://user-images.githubusercontent.com/96903338/156157132-840e18f7-707e-410d-a7ca-42e3d33188dd.png)
 
-                        Fig 1. Truth Table
+       Fig 1. Truth Table
 
 The Boolean expression for sum and Carry is as below :
 
@@ -43,7 +43,7 @@ The circuit consists of 3 stages – A 3 transistor XNOR logic and sum and carry
 
 
 
-                     Fig 2. Circuit Diagram [1]
+        Fig 2. Circuit Diagram [1]
 
  Transistor PM1 in XNOR logic acts as a pass transistor to supply voltage to NM1,NM2 which forms the XNOR logic. From the truth table it can be seen that the value of carry Cout is dependent on the state of the input itself. 
 If A=B, Cout = B
@@ -90,7 +90,8 @@ Average current = **6.315uA**
 
 The propagation delay of a circuit is the time taken for the output to change when the input has changed. It is calculated at a threshold of 50% of signal level at both input and output. Propagation delay is calculated for the highest delay critical path in the circuit. The critical path for the proposed full adder is shown below :
 
-![image](https://user-images.githubusercontent.com/96903338/156158412-99796219-6469-459f-9fe9-e6f043e81358.png)
+
+![image](https://user-images.githubusercontent.com/96903338/156163115-75e803a2-67c5-4068-a51e-b51863cf0a00.png)
 
 The input states for the worst case delay is as below :
 
