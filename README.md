@@ -88,15 +88,7 @@ Average current = **6.315uA**
               
 **c. Propagation Delay Calculation**
 
-The propagation delay of a circuit is the time taken for the output to change when the input has changed. It is calculated at a threshold of 50% of signal level at both input and output. Propagation delay is calculated for the highest delay critical path in the circuit. The critical path for the proposed full adder is shown below :
-
-
-![image](https://user-images.githubusercontent.com/96903338/156163115-75e803a2-67c5-4068-a51e-b51863cf0a00.png)
-
-The input states for the worst case delay is as below :
-
-![image](https://user-images.githubusercontent.com/96903338/156160963-1eb7605d-6e9d-428f-8125-510b2f2a5d14.png)
-
+The propagation delay of a circuit is the time taken for the output to change when the input has changed. It is calculated at a threshold of 50% of signal level at both input and output. Propagation delay is calculated for the highest delay critical path in the circuit.
 
 The output load taken is 10fF and input slew is 0.1ns for the calculation of propagation delay.
 
