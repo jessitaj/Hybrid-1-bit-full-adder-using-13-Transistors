@@ -1,4 +1,4 @@
-# Hybrid-1-bit-full-adder-using-13-Transistors
+#           Hybrid 1 Bit Full Adder Using 13 Transistors
 This repository consists of circuit design details of 1 bit Full adder using 13 transistors and its simulation results. The design was implemented in Synopsys Custom Compiler tool using 28nm CMOS technology PDK.
 
 TABLE OF CONTENTS 
@@ -106,7 +106,7 @@ Observed propagation delay for Carry : **0.242ns**
 
 ##  6. Netlist ##
 
-Netlist for the circuit is shared here.
+Netlist for the circuit is shared [here](https://github.com/jessitaj/Hybrid-1-bit-full-adder-using-13-Transistors/blob/main/netlist_1Bit_Full_Adder.txt).
 
 ##  7. Author ##
 
