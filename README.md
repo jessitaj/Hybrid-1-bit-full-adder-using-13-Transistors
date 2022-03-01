@@ -90,11 +90,14 @@ Average current = **6.315uA**
 
 The propagation delay of a circuit is the time taken for the output to change when the input has changed. It is calculated at a threshold of 50% of signal level at both input and output. Propagation delay is calculated for the highest delay critical path in the circuit.
 
-The output load taken is 10fF and input slew is 0.1ns for the calculation of propagation delay.
+The output load taken is 10fF and input slew is 0.1ns for the calculation of propagation delay. Sample Values are :
 
-Observed propagation delay for Sum : **0.840ns**
+![image](https://user-images.githubusercontent.com/96903338/156187511-2f89689a-e440-47e8-84e1-b3433f638905.png)
 
-Observed propagation delay for Carry : **0.242ns** 
+
+Observed propagation delay for Sum : **1.3ns**
+
+Observed propagation delay for Carry : **1.2ns** 
 
 
 ##  6. Netlist ##
