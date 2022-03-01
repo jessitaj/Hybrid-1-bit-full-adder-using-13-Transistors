@@ -29,13 +29,21 @@ Full adder takes 3 inputs (A,B Cin) and generates Sum and Carry (Cout) as descri
 
 ![truth_table](https://user-images.githubusercontent.com/96903338/156157132-840e18f7-707e-410d-a7ca-42e3d33188dd.png)
 
+                        Fig 1. Truth Table
+
 The Boolean expression for sum and Carry is as below :
+
 Sum=A⊗B⊗C		                (1)
-Cout=AB+BC+AC                (2)
+
+Cout=AB+BC+AC                    (2)
+
 The circuit consists of 3 stages – A 3 transistor XNOR logic and sum and carry generation logic.
 
-![image](https://user-images.githubusercontent.com/96903338/156047098-69bf787a-75fd-4544-9ac9-99191ec2e5bc.png)
-Fig 2. Circuit Diagram [1]
+![image](https://user-images.githubusercontent.com/96903338/156161088-40cc26ef-9d10-4bfb-8c6d-02961a13a309.png)
+
+
+
+                     Fig 2. Circuit Diagram [1]
 
  Transistor PM1 in XNOR logic acts as a pass transistor to supply voltage to NM1,NM2 which forms the XNOR logic. From the truth table it can be seen that the value of carry Cout is dependent on the state of the input itself. 
 If A=B, Cout = B
@@ -62,30 +70,38 @@ Transistor M5 used to implement inverter has W= 0.1um and L=0.075um and all the 
 
 ##  5. Circuit Analysis  ##
 **a. Transient Analysis**
+
 Transient analysis is used to observe circuit behaviour over a period of time. The 3 inputs of adder circuit A,B,C were given pulses with different period and observed the values of Sum and carry as shown below :
 
 ![full_adder_transient_analysis](https://user-images.githubusercontent.com/96903338/156154794-4b7aaaf1-3656-4f0c-a525-76ceaf60892b.png)
 
-**b. Power Calculation ** 
+**b. Power Calculation**
 
 Observed the current through all the sources present in the circuit A,B,C and power supply. Calculated the average value of the current using the 'measure' utility of the waveviewer.
 
-              Average current =
-              Vdd =1.05V
-              Total Power = V*I =
+Average current = **6.315uA**
+
+ Vdd = **1.05V**
+ 
+ Total Power = V*I = **6.63uW**
+ 
               
-**c.Propagation Delay Calculation **
+**c. Propagation Delay Calculation**
 
 The propagation delay of a circuit is the time taken for the output to change when the input has changed. It is calculated at a threshold of 50% of signal level at both input and output. Propagation delay is calculated for the highest delay critical path in the circuit. The critical path for the proposed full adder is shown below :
 
-![image](https://user-images.githubusercontent.com/96903338/156156319-2b564c93-0a3d-4d4e-b67d-c4c475837d1a.png)
+![image](https://user-images.githubusercontent.com/96903338/156158412-99796219-6469-459f-9fe9-e6f043e81358.png)
 
 The input states for the worst case delay is as below :
 
-![image](https://user-images.githubusercontent.com/96903338/156156437-e6c3b53f-49ad-4fda-bfcb-a6d42e156aee.png)
+![image](https://user-images.githubusercontent.com/96903338/156160963-1eb7605d-6e9d-428f-8125-510b2f2a5d14.png)
 
-Observed propagation delay for Sum : 0.840ps
-Observed propagation delay for Carry : 0.242ps 
+
+The output load taken is 10fF and input slew is 0.1ns for the calculation of propagation delay.
+
+Observed propagation delay for Sum : **0.840ns**
+
+Observed propagation delay for Carry : **0.242ns** 
 
 
 ##  6. Netlist ##
